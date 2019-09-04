@@ -22,3 +22,27 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+date1 = input("please enter month, year.")
+
+today = datetime.today()
+
+def days(*args):
+    print(args)
+    if len(args) == 1 and args[0] == '':
+         print(calendar.prmonth(today.year, today.month))
+    elif len(args) == 1:
+        datez=[]
+        for i in args:
+            datez.append(i)
+        if len(datez) == 1:
+            print(calendar.prmonth(today.year, int(args[0])))
+        elif len(datez) == 2:
+            print(calendar.prmonth(datez[1], datez[0]))
+        else: 
+            print("Wrong format given. Enter month, year")    
+    else:
+        print("Wrong format given. Enter month, year")
+
+
+days(date1)
