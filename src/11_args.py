@@ -28,7 +28,7 @@ a = [7, 6, 5, 4]
 
 # What thing do you have to add to make this work?
 print(f2(a[0], a[1], a[2], a[3]))    # Should print 22
-
+print(f2(*a))
 # Write a function f3 that accepts either one or two arguments. If one argument,
 # it returns that value plus 1. If two arguments, it returns the sum of the
 # arguments. Google "python default arguments" for a hint.

@@ -3,7 +3,8 @@
 
 # YOUR CODE HERE
 class LatLon:
-    def __init__(self, lat, lon):
+    def __init__(self, name, lat, lon):
+        self.name = name
         self.lat = lat
         self.lon = lon
   
@@ -31,7 +32,8 @@ class Geocache(LatLon):
 # Make a new waypoint and print it out: "Catacombs", 41.70505, -121.51521
 
 # YOUR CODE HERE
-Waypoint()
+Waypoint("Catacombs41", 41.70505, -121.51521)
+print
 # Without changing the following line, how can you make it print into something
 # more human-readable? Hint: Look up the `object.__str__` method
 print(waypoint)

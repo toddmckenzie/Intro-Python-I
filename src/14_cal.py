@@ -23,26 +23,35 @@ import sys
 import calendar
 from datetime import datetime
 
-date1 = input("please enter month, year.")
-
+date1 = input("please enter month")
+date2 = input("please enter a year")
 today = datetime.today()
 
+# def days(*args):
+#     print(args)
+#     if len(args) == 1 and args[0] == '':
+#          print(calendar.prmonth(today.year, today.month))
+#     elif len(args) == 1:
+#         datez=[]
+#         for i in args:
+#             datez.append(i)
+#         if len(datez) == 1:
+#             print(calendar.prmonth(today.year, int(args[0])))
+#         elif len(datez) == 2:
+#             print(calendar.prmonth(datez[1], datez[0]))
+#         else: 
+#             print("Wrong format given. Enter month, year")    
+#     else:
+#         print("Wrong format given. Enter month, year")
+
 def days(*args):
-    print(args)
-    if len(args) == 1 and args[0] == '':
-         print(calendar.prmonth(today.year, today.month))
-    elif len(args) == 1:
-        datez=[]
-        for i in args:
-            datez.append(i)
-        if len(datez) == 1:
-            print(calendar.prmonth(today.year, int(args[0])))
-        elif len(datez) == 2:
-            print(calendar.prmonth(datez[1], datez[0]))
-        else: 
-            print("Wrong format given. Enter month, year")    
-    else:
-        print("Wrong format given. Enter month, year")
+  if date1 == '':
+    print(calendar.prmonth(today.year, today.month))
+  elif date1 != '' and date2 == '':
+    print(calendar.prmonth(today.year, int(date1)))
+  elif date1 != '' and date2 != '':
+    print(calendar.prmonth(int(date2), int(date1)))
+  else:
+    print("Wrong format given.")
 
-
-days(date1)
+days(date1, date2)
