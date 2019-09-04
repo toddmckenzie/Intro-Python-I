@@ -1,2 +1,1 @@
 
-            datez.append(i)
